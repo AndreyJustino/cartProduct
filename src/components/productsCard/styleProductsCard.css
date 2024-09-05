@@ -13,17 +13,16 @@
   padding-bottom: 3.4em;
 }
 
-.card::after {
-  content: "Add to Cart";
-  padding-top: 1.25em;
-  padding-left: 1.25em;
+.button-add-to-cart {
+  display: block;
   position: absolute;
   left: 0;
   bottom: -60px;
   background: #00ac7c;
   color: #fff;
   height: 2.5em;
-  width: 90%;
+  width: 100%;
+  height: 15%;
   transition: all 80ms;
   font-weight: 600;
   text-transform: uppercase;
@@ -49,18 +48,13 @@
   color: #000;
 }
 
-.card:hover::after {
+.card:hover .button-add-to-cart {
   bottom: 0;
   opacity: 1;
 }
 
 .card:active {
   transform: scale(0.98);
-}
-
-.card:active::after {
-  content: "Added !";
-  height: 3.125em;
 }
 
 .text {
@@ -75,7 +69,7 @@
   place-items: center;
 }
 
-.image img{
+.image img {
   width: 100%;
   height: 100%;
 }
