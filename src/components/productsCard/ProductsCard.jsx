@@ -1,22 +1,17 @@
 import React from "react";
 import "./styleProductsCard.css";
 
-function ProductsCard({urlImg, price, title}) {
-  function evento(img, titulo, preco){
-    
-  }
+function ProductsCard({urlImg, price, title, addToCart}) {
   return (
     <>
-      <li onClick={() => {
-        evento(urlImg, title, price);
-      }}>
-        <div class="card">
-          <div class="image">
+      <li>
+        <div className="card">
+          <div className="image">
             <img src={urlImg} />
           </div>
-          <span class="title">{title}</span>
-          <span class="price">R${price}</span>
-          <button className="button-add-to-cart">ADD</button>
+          <span className="title">{title}</span>
+          <span className="price">R${price}</span>
+          <button className="button-add-to-cart" onClick={addToCart}>ADD to cart</button>
         </div>
       </li>
     </>

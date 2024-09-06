@@ -1,25 +1,19 @@
 import React from "react";
 import CartProductsCard from "../cartProductsCard/CartProductsCard.jsx";
-import "./styleCart.css"
+import "./styleCart.css";
 
-function Cart() {
-  const produtos = [{}]
+function Cart({cart}) {
   return (
     <ul className="listaCart">
-      {
-        produtos.map((value, index) => {
-          return (
-            <CartProductsCard
-              img={value.img}
-              price={value.price}
-              title={value.title}
-            />
-          )
-        })
-      }
-      
-      
-
+      {cart.map((value, index) => {
+        return (
+          <CartProductsCard
+            img={value.urlImg}
+            price={value.price}
+            title={value.title}
+          />
+        );
+      })}
     </ul>
   );
 }

@@ -3,7 +3,6 @@
   width: 11.875em;
   height: 16.5em;
   box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.342);
-  cursor: pointer;
   transition: all 120ms;
   display: flex;
   align-items: center;
@@ -27,6 +26,8 @@
   font-weight: 600;
   text-transform: uppercase;
   opacity: 0;
+  border: 2px solid #277a64;
+  cursor: pointer;
 }
 
 .card .title {

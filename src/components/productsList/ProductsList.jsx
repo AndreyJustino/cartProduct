@@ -1,7 +1,7 @@
 import ProductsCard from "../productsCard/productsCard.jsx";
 import "./styleProductsList.css"
 
-function ProductsList() {
+function ProductsList({setCart, cart}) {
   const produtos = [
     {
       urlImg:
@@ -23,6 +23,10 @@ function ProductsList() {
     },
   ];
 
+  function addToCart(produto){
+    setCart([...cart, produto])
+  }
+
   return (
     <ul className="listaProdutos">
       {
@@ -32,6 +36,7 @@ function ProductsList() {
               urlImg={value.urlImg}
               price={value.price}
               title={value.title}
+              addToCart={() => addToCart(value)}
             />
           )
         })

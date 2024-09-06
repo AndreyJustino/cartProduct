@@ -7,8 +7,10 @@ function CartProductsCard({img,title, price}) {
       <li className="elementLiCart">
         <div class="cardCart">
           <div class="cardCart_load"><img src={img}/></div>
-          <div class="cardCart_load_extreme_title"><h1>{title}</h1></div>
-          <div class="cardCart_load_extreme_descripion"><h1>{price}</h1></div>
+          <div className="containerCart">
+            <div class="cardCart_load_extreme_title">{title}</div>
+            <div class="cardCart_load_extreme_descripion">R$ {price}</div>
+          </div>
         </div>
       </li>
     </>
